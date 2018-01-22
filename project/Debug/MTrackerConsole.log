@@ -1,0 +1,32 @@
+﻿Build started 2017-01-11 11:55:20.
+     1>Project "C:\student\nus\wzorzec\project\MTrackerConsole.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Iexternal\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\MTrackerConsole.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Iexternal\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MTd /GS /arch:SSE2 /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt MTrackerCommands.cpp MTrackerConsole.cpp MTrackerConsoleDlg.cpp WinCom.cpp controller.cpp crc16.cpp
+         crc16.cpp
+         controller.cpp
+         WinCom.cpp
+         MTrackerConsoleDlg.cpp
+         MTrackerConsole.cpp
+         MTrackerCommands.cpp
+     1>c:\student\nus\wzorzec\project\mtrackercommands.cpp(1): warning C4103: 'c:\student\nus\wzorzec\project\mtrackercommands.cpp' : alignment changed after including header, may be due to missing #pragma pack(pop)
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /l"0x0409" /IDebug\ /nologo /fo"Debug\MTrackerConsole.res" MTrackerConsole.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\student\nus\wzorzec\Debug\MTrackerConsole.exe" /INCREMENTAL /NOLOGO Nafxcwd.lib Libcmtd.lib winmm.lib /NODEFAULTLIB:"Nafxcwd.lib Libcmtd.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\student\nus\wzorzec\Debug\MTrackerConsole.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\student\nus\wzorzec\Debug\MTrackerConsole.lib" /MACHINE:X86 /SAFESEH Debug\MTrackerConsole.res
+         Debug\controller.obj
+         Debug\crc16.obj
+         Debug\MTrackerCommands.obj
+         Debug\MTrackerConsole.obj
+         Debug\MTrackerConsoleDlg.obj
+         Debug\stdafx.obj
+         Debug\WinCom.obj
+     1>controller.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+         MTrackerConsole.vcxproj -> C:\student\nus\wzorzec\Debug\MTrackerConsole.exe
+     1>Done Building Project "C:\student\nus\wzorzec\project\MTrackerConsole.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.47
