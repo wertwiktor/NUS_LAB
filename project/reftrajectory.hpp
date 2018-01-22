@@ -18,9 +18,27 @@ private:
 	Vector2d GetPos(double tau) 
 	{
 		Vector2d pr;
+	//	Vector2d prp;
+	//	Vector2d prpp;
 		
-		double xr = 0.2*sin(0.1*tau);			
-		double yr = 0.2*cos(0.1*tau);
+		//oryginalne
+		//double xr = A*sin(omega*tau);			
+		//double yr = A*cos(omega*tau);
+
+		//double xr = Xd + Ax*cos(omega*tau + psi_x);
+		//double yr = Yd + Ay*sin(omega*tau/2 + psi_y);
+
+		double xr = 0.5;
+		double yr = 0.1;
+
+
+/*
+		double xrp = A*omega*cos(omega*tau);
+		double yrp = -A*omega*sin(omega*tau);
+
+		double xrpp = -A*omega*omega*sin(omega*tau);
+		double yrpp = -A*omega*omega*cos(omega*tau);
+*/
 
 		pr << xr, yr;
 		return pr;
@@ -50,9 +68,21 @@ public:
 	Vector2d dpr;
 	Vector2d ddpr;
 
+	double A;
+	double omega;
+	double psi_x, psi_y, Ax, Ay, Xd, Yd;
+
 	RefTrajectory() 
 	{
 		Ts = 0.02;
+		A = 0.3;
+		omega = 0.5;
+		Xd = 0;
+		Yd = 0;
+		Ax = 0.3;
+		Ay = 0.3;
+		psi_x = -3.1415/2;
+		psi_y = 0;
 		Init();	
 	}
 

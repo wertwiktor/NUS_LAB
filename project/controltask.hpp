@@ -23,6 +23,7 @@ private:
 	RefTrajectory refTr;
 	Controller cntr;
 	
+	
 public:
 	bool running;
 	int receivedStatus;
@@ -75,6 +76,7 @@ public:
 		static LARGE_INTEGER fr,st,end;BOOL b;
 		static double dtime,time = 0;
 		b = QueryPerformanceFrequency(&fr);
+		
 
 		if (p) 
 		{

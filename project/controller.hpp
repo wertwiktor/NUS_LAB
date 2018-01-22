@@ -8,6 +8,7 @@ class Controller
 {
 	double Ts;
 	double Wmax;
+	double integral;
 	Matrix2d J;
 
 	void CalculateWheelsVel();
@@ -17,6 +18,7 @@ public:
 	Vector3d g, gr;
 	Vector2d dpr;
 	Vector2d ddpr;
+	
 
 	Vector2d u, uw;
 	
@@ -26,6 +28,7 @@ public:
 	{
 		Ts = 0.02;	
 		Wmax = 30.0;
+		integral = 0.01;
 
 		const double r = 0.025;
 		const double b = 0.145;

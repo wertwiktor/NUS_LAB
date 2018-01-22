@@ -26,15 +26,45 @@ void Controller::Update()
 {
 
 	Vector2d p, pr, dp, e, de;
+	Vector2d omega;
 	Vector2d v, w;
-	Matrix2d Kp, Kd, P;
+	Matrix2d Kp, Kd, P, Pinv;
+	Vector2d tempOut;
+	double th, exp, eyp,u2;
+
+	// theta do lokalnej
+	th = g(2);
 	
+	// po³o¿enie do lokalnej
+	p << g(0), g(1);
+
+	//referencyjne
+	pr << gr(0), gr(1);
+
+	
+
+	//oszukany uchyb
+	exp = cos(th)*u(0) - dpr(0);
+	eyp =3*( sin(th)*u(0) - dpr(1));
+	de << exp, eyp;
+
 	// gain matrices
 	Kp << 1.0, 0, 0, 1.0;
-	Kd << 1.0, 0, 0, 1.0;
+	Kd << 2.0, 0, 0, 2.0;
+	
+	// uchyb sterowania
+	e = p - pr;
 
+
+	// macierz P
+	P << cos(th), -sin(th)*u(0), sin(th), cos(th)*u(0);
+	Pinv = P.inverse();
 	// for test purpose
-	u << 0.3*sin(4.0*time), 0.0;
+	tempOut = Pinv*(-Kp*e - Kd*de + ddpr);
+	integral += tempOut(0)*0.02;
+	u << integral, tempOut(1);
+	
+	
 
 	CalculateWheelsVel();
 
